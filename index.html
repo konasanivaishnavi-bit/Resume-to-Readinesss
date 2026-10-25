@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="Resume to Readiness — build skills, prove readiness, and grow together." />
+  <title>Resume to Readiness — Your career, in progress</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <section id="authView" class="auth-shell">
+    <div class="auth-brand">
+      <div class="brand-mark">R<span>→</span></div>
+      <div><div class="brand-name">Resume to Readiness</div><div class="brand-tag">YOUR CAREER, IN PROGRESS.</div></div>
+    </div>
+    <div class="auth-layout">
+      <div class="auth-copy">
+        <div class="eyebrow"><span class="pulse"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Your potential.<br/><em>With a plan.</em></h1>
+        <p>Turn your resume into a roadmap. Build real skills, find your people, and get ready for the opportunities you want.</p>
+        <div class="auth-points">
+          <div><span class="check">✓</span><span><b>Know your gaps</b><small>Understand what a target role asks for.</small></span></div>
+          <div><span class="check">✓</span><span><b>Make progress visible</b><small>Build a path you can actually follow.</small></span></div>
+          <div><span class="check">✓</span><span><b>Grow together</b><small>Learn alongside your mates and mentors.</small></span></div>
+        </div>
+        <div class="auth-note">A preparation platform — not a job-placement promise.</div>
+      </div>
+      <div class="auth-card">
+        <div class="auth-tabs"><button class="tab active" data-auth="login">Log in</button><button class="tab" data-auth="signup">Create account</button></div>
+        <form id="authForm">
+          <h2 id="authTitle">Welcome back</h2>
+          <p id="authSub" class="muted">Pick up where your growth left off.</p>
+          <label for="username">Username</label>
+          <input id="username" name="username" maxlength="70" autocomplete="username" placeholder="e.g. vaish_codes" required />
+          <div id="passwordWrap"><label for="password">Password</label><input id="password" name="password" type="password" minlength="8" autocomplete="current-password" placeholder="At least 8 characters" required /></div>
+          <div id="signupExtra" class="hidden">
+            <label for="studyBio">Study bio</label>
+            <textarea id="studyBio" maxlength="240" rows="2" placeholder="Your field, interests, and what you're learning…"></textarea>
+            <label for="targetRole">Target role</label>
+            <input id="targetRole" maxlength="100" placeholder="e.g. Python Backend Intern" />
+          </div>
+          <button class="btn primary full" type="submit" id="authSubmit">Log in <span>→</span></button>
+          <p class="fineprint">Demo mode: account data stays in this browser. Do not use a real password. Production needs server-side authentication and secure storage.</p>
+        </form>
+      </div>
+    </div>
+    <div class="auth-footer"><span>© 2026 Resume to Readiness</span><span>Built for progress, not perfection.</span></div>
+  </section>
+
+  <div id="appView" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <a href="#" class="side-brand" data-page="dashboard"><div class="brand-mark small">R<span>→</span></div><div><div class="brand-name">Resume to Readiness</div><div class="brand-tag">GROW WITH PURPOSE</div></div></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-page="dashboard"><span>◫</span> Overview</button>
+        <button class="nav-item" data-page="resume"><span>▤</span> Resume lab <i class="nav-dot"></i></button>
+        <button class="nav-item" data-page="roadmap"><span>⌁</span> My roadmap</button>
+        <button class="nav-item" data-page="practice"><span>◉</span> Practice room</button>
+        <button class="nav-item" data-page="community"><span>◎</span> Mate network</button>
+        <button class="nav-item" data-page="mentors"><span>✳</span> Mentors & solutions</button>
+        <button class="nav-item" data-page="competition"><span>♜</span> Competition board</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="bixby-mini"><div class="bixby-orb">✦</div><div><b>Bixby is here</b><small>Your study companion</small></div><button data-page="bixby" aria-label="Open Bixby">↗</button></div>
+        <button class="nav-item" data-page="profile"><span>⚙</span> Profile settings</button>
+        <button class="nav-item signout" id="logoutBtn"><span>↪</span> Log out</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="crumb"><span>Workspace</span><b>/</b><strong id="pageCrumb">Overview</strong></div>
+        <div class="top-actions"><button class="icon-btn" data-page="bixby" title="Ask Bixby">✦</button><div class="top-avatar" id="topAvatar">V</div><div class="top-user"><b id="topUsername">Learner</b><small id="topRole">Career explorer</small></div></div>
+      </header>
+      <div class="page-content" id="pageContent"></div>
+      <footer class="app-footer">Resume to Readiness <span>•</span> Prepare with purpose. Connect with people.</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
